@@ -1,0 +1,6 @@
+pandas
+zipfile
+os
+sqlalchemy
+datetime
+psycopg2
