@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 import insert
-import selectCommand
+#import selectCommand
 import structure
 import zipfile
 import os
@@ -40,33 +40,6 @@ if choose == "Wrzuć pliki na serwer":
         insert.insert_files(uploaded_files)
 
 
-
-elif choose == "Select":
-    st.header("Select")
-
-    select_input = st.text_input("Wpisz komendę")
-    if select_input:
-        try:
-            querry = select_input
-            DF = pd.read_sql(sql=querry, con=engine)
-            DF.to_csv("select.csv")
-            selectFile = open("select.csv", "r")
-
-            st.download_button(
-                label='Pobierz plik',
-                data=selectFile,
-                file_name=f'select.csv',
-                mime='csv'
-            )
-
-
-            if select_input:
-                if chooseD:
-                    data = selectCommand.select(select_input)
-                    st.dataframe(data)
-        except:
-            st.error("Składnia niepoprawna")
-        
 elif choose == "Przekształć pliki wejściowe":
     st.header("Przekształć pliki wejściowe")
     uploaded_files = st.file_uploader("Proszę wybrać pliki csv", accept_multiple_files=True)
