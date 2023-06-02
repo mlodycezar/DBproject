@@ -1,4 +1,4 @@
-import psycopg2 as ps
+"""import psycopg2 as ps
 import pandas as pd
 
 def select(in_put):
@@ -13,4 +13,4 @@ def select(in_put):
     sql = in_put
     dat = pd.read_sql_query(sql, conn)
     conn = None
-    return dat
+    return dat"""
