@@ -1,7 +1,6 @@
 import pandas as pd
 import streamlit as st
 import insert
-#import selectCommand
 import structure
 import zipfile
 import os
