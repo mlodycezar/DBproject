@@ -1,0 +1,7 @@
+# Ignoruj wszystkie pliki CSV w folderze streamlit_app
+streamlit_app/*.csv
+
+# Ignoruj wszystkie pliki HTML w folderze streamlit_app
+streamlit_app/*.html
+
+venv/
